@@ -1,0 +1,601 @@
+body {
+    background  : url("/images/debut_light.png") repeat;
+    font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size   : 100%;
+    text-shadow : 0 1px #fff;
+    margin      : 0;
+}
+
+body, input {
+    color : #333;
+}
+
+li {
+    list-style : none;
+}
+
+input, a, button {
+    outline : none;
+}
+
+a {
+    text-decoration : none;
+    color           : inherit;
+}
+
+/**
+ * Classes
+ */
+.navigation {
+    padding : 15px 5px;
+}
+
+.navigationLink {
+    display : block;
+}
+
+.pageTitle {
+    display : inline;
+    margin  : 0 0 0 5px;
+}
+
+.buttonlist {
+    display : inline-block;
+    margin  : 0;
+    padding : 0;
+}
+
+.floatleft {
+    float : left;
+}
+
+.floatright {
+    float : right;
+}
+
+.fieldname,
+.fieldtext {
+    font-size : 2em;
+}
+
+.fieldname {
+    /*float        : left;*/
+    /*min-width    : 7em;*/
+    /*margin-right : 1em;*/
+    /*margin-top   : 0.5em;*/
+}
+
+.inputfield {
+}
+
+input[type='text'],
+input[type='submit'],
+select {
+    width         : 80%;
+
+    padding       : 0.5em;
+    border        : 1px solid;
+    border-radius : 0.5em;
+}
+
+input[type='text'],
+input[type='submit'] {
+    background-color : rgba(0, 0, 0, 0.05);
+    border-color     : transparent;
+}
+
+input:focus {
+    box-shadow         : inset 0 2px 5px #98b0d9;
+    -webkit-box-shadow : inset 0 2px 5px #98b0d9;
+    outline            : none;
+}
+
+input:hover, .itemLink:hover {
+    background-color : rgba(0, 0, 0, 0.1);
+}
+
+.formArea {
+}
+
+.formField {
+    margin-left : 12em;
+    padding     : 0.5em;
+}
+
+.defaultpadding {
+    padding : 0.5em 0.5em 0.5em 1em;
+}
+
+.bluegradient {
+    background : #c3d9ff;
+    background : url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2MzZDlmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjQxJSIgc3RvcC1jb2xvcj0iI2IxYzhlZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OGIwZDkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background : -moz-linear-gradient(top, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    background : -webkit-gradient(linear, left top, left bottom, color-stop(0%, #c3d9ff), color-stop(41%, #b1c8ef), color-stop(100%, #98b0d9));
+    background : -webkit-linear-gradient(top, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    background : -o-linear-gradient(top, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    background : -ms-linear-gradient(top, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+    background : linear-gradient(to bottom, #c3d9ff 0%, #b1c8ef 41%, #98b0d9 100%);
+}
+
+.list {
+    width   : 40%;
+    display : inline-block;
+    margin  : 0;
+    padding : 0;
+}
+
+.listItem {
+    list-style : none;
+    padding    : 0.5em 0;
+}
+
+.center {
+    text-align : center;
+}
+
+.itemLink {
+    display          : block;
+    padding          : 0.3em 0.5em;
+    font-size        : 2em;
+    border           : 1px solid transparent;
+    background-color : rgba(0, 0, 0, 0.05);
+    border-radius    : 0.5em;
+
+    outline          : none;
+    text-decoration  : none;
+    color            : inherit;
+}
+
+.addItemLink {
+    padding         : 0.5em 0;
+    outline         : none;
+    text-decoration : none;
+    color           : inherit;
+}
+
+.itemLinkTitle {
+    width         : 90%;
+    display       : inline-block;
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+}
+
+/**
+ * Menu
+ */
+
+.menuItems {
+    padding : 10px;
+}
+
+.menuItem {
+    height        : 26px;
+    margin-bottom : 5px;
+
+    border-radius : 1.2em;
+    padding       : 2px 20px;
+
+    font-weight   : bold;
+    line-height   : 26px;
+}
+
+.menuItemLink {
+    display : block;
+}
+
+/*
+ * icon buttons
+ */
+button {
+    background-color : transparent;
+    border           : none;
+    cursor           : pointer;
+    outline          : none;
+}
+
+.button, .buttonWide {
+    display          : inline-block;
+    height           : 20px;
+
+    border           : 1px solid #ccc;
+    background-color : #fff;
+    box-shadow       : 0 1px 4px rgba(0, 0, 0, 0.3);
+    cursor           : pointer;
+}
+
+.button {
+    width                 : 20px;
+    padding               : 2px 1px 2px 3px;
+    border-radius         : 50%;
+    -webkit-border-radius : 13px; /*iOS3; cannot use %*/
+}
+
+.buttonWide {
+    width         : 100%;
+    border-radius : 1.3em;
+    padding       : 2px 0;
+    height        : 26px;
+}
+
+.buttonWide:hover {
+    background-color : #ddd;
+}
+
+.icon {
+    width                 : 18px;
+    height                : 18px;
+    margin-top            : 1px;
+    border-radius         : 50%;
+    -webkit-border-radius : 9px; /* iOS3; cannot use % */
+    background            : #98b0d9 url('/images/icons-18-white.png') no-repeat scroll;
+
+    text-align            : center;
+    text-indent           : -9999px;
+    white-space           : nowrap;
+    font-size             : 1em;
+}
+
+.buttonWide .icon {
+    margin-left  : auto;
+    margin-right : auto;
+}
+
+.icon.ic_plus {
+    background-position : 0 50%;
+}
+
+.icon.ic_cross {
+    background-position : -72px 50%;
+}
+
+.icon.ic_right_arrow {
+    background-position : -108px 50%;
+}
+
+.icon.ic_left_arrow {
+    background-position : -144px 50%;
+}
+
+.icon.ic_save_arrow {
+    background-position : -252px 50%;
+}
+
+/**
+ * Feedback messages
+ */
+.fullscreenOverlay {
+    position         : absolute;
+    top              : 0;
+    left             : 0;
+    width            : 100%;
+    min-height       : 100%;
+
+    background-color : rgba(25, 25, 25, 0.5);
+}
+
+.centeredContainer {
+    position : absolute;
+
+    left     : 50%;
+    top      : 50%;
+}
+
+#feedbackMessagesCloseButton {
+    position : absolute;
+    left     : 229px;
+    top      : -15px;
+}
+
+.feedbackContainer {
+    width            : 200px;
+    margin-left      : -124px; /* should include the padding and border */
+    margin-top       : -20px; /* may be overridden by javascript */
+    background-color : #fff;
+    border           : 4px solid #98b0d9;
+    border-radius    : 0.5em;
+    padding          : 20px;
+    box-shadow       : 0 0 5px 2px #c3d9ff;
+
+    text-align       : center;
+    font-size        : 1.5em;
+    color            : #333;
+}
+
+.feedbackContainer ul {
+    padding    : 0;
+    overflow-x : auto;
+}
+
+/**
+ * Image selector
+ */
+.imgSelector {
+    position         : relative;
+    width            : 150px;
+    height           : 150px;
+
+    overflow         : hidden;
+    background-color : #333;
+}
+
+.imgSelector div {
+    height : inherit;
+    width  : inherit;
+}
+
+.imgSelector .img-selector-list {
+    position : relative;
+    height   : inherit;
+    width    : inherit;
+
+    padding  : 0;
+    margin   : 0;
+
+    z-index  : 0;
+}
+
+.imgSelector .img-selector-list-item {
+    position : absolute;
+    top      : 0;
+    left     : 0;
+    display  : none;
+
+    width    : inherit;
+    height   : inherit;
+
+    z-index  : 0;
+}
+
+.imgSelector .img-selector-label {
+    display          : block;
+    position         : relative;
+    height           : inherit;
+    width            : inherit;
+
+    background-color : #ddd;
+    z-index          : 0;
+}
+
+.imgSelector .img-selector-radio {
+    position : absolute;
+    z-index  : 0;
+}
+
+.imgSelector .img-selector-image {
+    position   : absolute;
+
+    max-height : 100%;
+    max-width  : 100%;
+
+    z-index    : 1;
+}
+
+.imgSelector .img-selector-caption {
+    position         : absolute;
+    width            : inherit;
+    height           : inherit;
+
+    background-color : #ccc;
+    padding-top      : 40%;
+    z-index          : 1;
+
+    text-align       : center;
+    font-weight      : bold;
+}
+
+.imgSelector .selectPrevImg,
+.imgSelector .selectNextImg {
+    position         : absolute;
+    top              : 0;
+    width            : 10%;
+    display          : none;
+
+    background-color : rgba(255, 255, 255, 0.5);
+    cursor           : pointer;
+}
+
+.imgSelector .selectNextImg {
+    right : 0;
+}
+
+.imgSelector .selectPrevImg:hover,
+.imgSelector .selectNextImg:hover {
+    background-color : rgba(100, 100, 100, 0.5);
+}
+
+.imgSelector:hover .selectPrevImg,
+.imgSelector:hover .selectNextImg {
+    display : block;
+}
+
+.imgSelector .selectText {
+    position    : absolute;
+    top         : 50%;
+    margin-top  : -0.5em;
+    width       : 100%;
+
+    list-style  : none;
+    font-weight : bold;
+    text-align  : center;
+    line-height : 1em;
+}
+
+.imgSelector .focus {
+    display : block;
+}
+
+.focus {
+    display : block;
+}
+
+/**
+* Use clearfix on non-floating elements that contain a floated element to force its height to include the floated element
+*/
+.clearfix:before, .clearfix:after {
+    content : " ";
+    display : table;
+}
+
+.clearfix:after {
+    clear : both;
+}
+
+/**
+ * Fixes for IE 7
+ */
+.clearfix {
+    *zoom : 1;
+}
+
+/**
+ * media queries
+ */
+@media screen and (max-width:720px) {
+    .fieldname {
+        float : none;
+    }
+
+    .list,
+    .inputfield {
+        display : block;
+        width   : 90%;
+    }
+
+    .itemLinkTitle {
+        width : 80%;
+    }
+}
+
+/**
+ * Wicket
+ */
+.wicket-aa ul {
+    margin        : 0;
+    padding       : 0;
+    border-radius : 1em;
+    border        : 1px solid #333;
+
+    overflow      : hidden;
+}
+
+.wicket-aa li {
+    background-color : rgba(200, 200, 200, 0.5);
+    padding          : 0 0 0 10px;
+    cursor           : pointer;
+    font-size        : 1.5em;
+}
+
+.wicket-aa li:hover {
+    background-color : rgba(200, 200, 200, 0.7);
+}
+
+#wicketAjaxDebugWindow {
+    font-size : 1.5em;
+}
+
+/* new style sheet */
+
+section {
+    margin : 0 1em 0 1em;
+}
+
+ol {
+    -webkit-padding-start : 0;
+    padding               : 0;
+}
+
+p {
+    margin : 0;
+}
+
+/* discogs release page */
+ol#discogsRelease > li {
+    padding : 0.2em 0 0.2em 0;
+}
+
+ol#discogsRelease > li:first-child {
+    float : left;
+}
+
+ol#discogsRelease > li:nth-child(2),
+ol#discogsRelease > li:nth-child(3) {
+    margin-left : 12em;
+}
+
+ol#discogsRelease > li:nth-child(2) > p.label ~ p,
+ol#discogsRelease > li:nth-child(3) > p.label ~ p {
+    margin-left : 4em;
+}
+
+ol#discogsRelease > li:nth-child(4) {
+    clear : both;
+}
+
+ol#discogsRelease > li > p.label {
+    float : left;
+}
+
+ol#discogsRelease > li > p.label  ~ ol,
+ol#discogsRelease > li > p.label  ~ p {
+    margin-left : 12em;
+}
+
+/* release page */
+ol#releasePage > li:first-child {
+    margin-bottom : 1em;
+}
+
+.releaseImg {
+    position     : relative;
+    margin-left  : auto;
+    margin-right : auto;
+    width        : 80%;
+    height       : 80%;
+
+    overflow     : hidden;
+}
+
+.releaseImg img {
+    max-width : 100%;
+}
+
+ol#releaseList > li {
+    padding : 0.2em 0 0.2em 0;
+}
+
+    ol#releaseList > li > a {
+        display          : block;
+        background-color : rgba(0, 0, 0, 0.05);
+    }
+
+        ol#releaseList > li > a > img {
+            height         : 3em;
+            vertical-align : middle;
+        }
+
+        ol#releaseList > li > a > span {
+            margin-left: 1em;
+        }
+
+/* media queries */
+@media only screen and (min-width:700px) {
+
+    ol#releasePage > li {
+        margin-left : 11em;
+    }
+
+    ol#releasePage > li:first-child {
+        margin-left : 0;
+        float       : left;
+    }
+
+    .releaseImg {
+        position : relative;
+        width    : 150px;
+        height   : 150px;
+
+        overflow : hidden;
+    }
+}
+

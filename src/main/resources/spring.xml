@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+
+    <!-- Wicket application -->
+    <bean id="wicketApplication" class="nl.laurs.view.WicketApplication"/>
+
+    <!-- Inject configuration specific details from .properties files -->
+    <bean
+            class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:database.properties"/>
+    </bean>
+
+    <!-- Database resource -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql://${db.host}:${db.port}/${db.name}"/>
+        <property name="user" value="${db.user}"/>
+        <property name="password" value="${db.password}"/>
+
+        <!-- connection pooling configuration is done by Hibernate (couldn't get it properly working otherwise) -->
+    </bean>
+
+    <!-- Transaction management -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <!-- Enable the configuration of transactional behavior based on annotations: @Transactional -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- Hibernate local session management using class annotations -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">nl.laurs.persistance.hibernateImpl.MyHibernateSQLDialect</prop>
+                <prop key="hibernate.show_sql">false</prop>
+
+                <!-- Naming strategy -->
+                <prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.DefaultNamingStrategy</prop>
+
+                <!-- Automatically generate database schema's; enable when necessary -->
+                <!-- Be careful, this will erase all data -->
+                <!--<prop key="hibernate.hbm2ddl.auto">create</prop>-->
+
+                <!-- Connection pooling -->
+                <prop key="c3p0.min_size">2</prop>
+                <prop key="c3p0.max_size">10</prop>
+                <prop key="c3p0.max_statements">50</prop>
+                <prop key="c3p0.timeout">3600</prop>
+                <prop key="c3p0.idle_test_period">300</prop>
+            </props>
+        </property>
+        <property name="packagesToScan">
+            <list>
+                <value>nl.laurs.domain</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- DAO's that are annotated will be found automatically -->
+    <context:component-scan base-package="nl.laurs.persistance.hibernateImpl"/>
+
+    <!-- Services that are annotated will be found automatically -->
+    <context:component-scan base-package="nl.laurs.service"/>
+
+</beans>

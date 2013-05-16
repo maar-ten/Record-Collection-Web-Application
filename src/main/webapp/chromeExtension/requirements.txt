@@ -1,0 +1,8 @@
+- wanneer je op een Discogs release pagina bent, kun je d.m.v. een druk
+  op een ikoontje de url van die pagina naar de web app sturen
+- de webapp verzameld vervolgens de gegevens van Discogs en verwerkt deze naar
+  objecten die opgeslagen worden in de database van de webapp
+- de webapp tenslotte stuurt een json object terug naar de waarin staat
+  of de release succesvol opgeslagen is, en indien dat het geval is
+  bevat het json object een url waar de gebruiker het resultaat kan
+  bekijken.

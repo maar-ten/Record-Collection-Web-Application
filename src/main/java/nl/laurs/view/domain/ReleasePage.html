@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<head>
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css"/>
+</head>
+
+<body>
+
+<wicket:extend>
+
+    <ol id="releasePage">
+        <wicket:enclosure child="releaseImage">
+            <li>
+                <div class="releaseImg">
+                    <img alt="" wicket:id="releaseImage"/>
+                </div>
+            </li>
+        </wicket:enclosure>
+        <li>
+            <span wicket:id="releaseTitle"/>
+        </li>
+        <li>
+            <span wicket:id="releaseLabel"/>
+        </li>
+        <li>
+            <span wicket:id="releaseCatno"/>
+        </li>
+        <li>
+            <span wicket:id="releaseYear"/>
+        </li>
+        <li>
+            <ol>
+                <li wicket:id="artistList">
+                    <span wicket:id="artistName"/>
+                </li>
+            </ol>
+        </li>
+        <li>
+            <ol>
+                <li wicket:id="trackList">
+                    <span wicket:id="trackPosition"/> - <span wicket:id="trackTitle"/>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+</wicket:extend>
+
+</body>
+</html>

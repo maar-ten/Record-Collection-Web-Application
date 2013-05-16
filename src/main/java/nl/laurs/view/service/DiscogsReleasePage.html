@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+<head>
+    <link rel="stylesheet" href="/css/stylesheet.css">
+</head>
+
+<body>
+
+<wicket:extend>
+
+    <div wicket:id="formContainer"></div>
+
+    <wicket:fragment wicket:id="formFragment">
+
+        <form wicket:id="form" action="">
+            <ol id="discogsRelease">
+                <li>
+                    <div class="imgSelector">
+                        <div wicket:id="imageSelector"></div>
+
+                        <div class="selectPrevImg">
+                            <div class="selectText">&lt;</div>
+                        </div>
+
+                        <div class="selectNextImg">
+                            <div class="selectText">&gt;</div>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <p class="label">Titel:</p>
+
+                    <p><span wicket:id="releaseTitle"/></p>
+                </li>
+
+                <li>
+                    <p class="label">Jaar:</p>
+
+                    <p><span wicket:id="releaseYear"/></p>
+                </li>
+
+                <li>
+                    <p class="label">Artiesten:</p>
+
+                    <ol>
+                        <li wicket:id="artistList">
+                            <span wicket:id="artistName"/>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <p class="label">Tracks:</p>
+                    <ol>
+                        <li wicket:id="trackList">
+                            <span wicket:id="trackPosition"/> - <span wicket:id="trackTitle"/>
+                        </li>
+                    </ol>
+                </li>
+
+                <li>
+                    <p class="label">Label (catno):</p>
+
+                    <p><select wicket:id="labelDropDownChoice"></select></p>
+                </li>
+
+                <li>
+                    <button class="buttonWide" wicket:id="saveButton">
+                        <div class="icon bgBlue ic_save_arrow">save</div>
+                    </button>
+                </li>
+            </ol>
+
+        </form>
+
+    </wicket:fragment>
+
+</wicket:extend>
+
+</body>
+</html>

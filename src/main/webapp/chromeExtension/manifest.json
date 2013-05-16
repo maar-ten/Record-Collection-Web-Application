@@ -1,0 +1,22 @@
+{
+    "name": "Discography Service",
+    "version": "1.0",
+    "description": "This extension checks if the currently loaded page is a Discogs page for a specific release, and then allows the user to send the url of that page to a fixed url webapp on the local machine",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "page_action": {
+        "default_icon": "icon-19.png",
+        "default_title": "You can store this release in your own database"
+    },
+    "permissions": [
+        "tabs",
+        "http://localhost/*",
+        "https://localhost/*"
+    ],
+    "icons": {
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "manifest_version": 2
+}

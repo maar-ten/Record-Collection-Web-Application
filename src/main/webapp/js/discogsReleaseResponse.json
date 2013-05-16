@@ -1,0 +1,359 @@
+{"status": "Accepted", "styles": ["House"], "videos": [
+    {
+        "duration": 248,
+        "description": "Donna Summer state of independence",
+        "embed": true,
+        "uri": "http://www.youtube.com/watch?v=KePwKX94NM4",
+        "title": "Donna Summer state of independence"
+    },
+    {
+        "duration": 349,
+        "description": "Donna Summer - State of Independence",
+        "embed": true,
+        "uri": "http://www.youtube.com/watch?v=v7k9RxUTPtI",
+        "title": "Donna Summer - State of Independence"
+    },
+    {
+        "duration": 506,
+        "description": "STATE OF INDEPENDENCE (MURK CLUB MIX) - DONNA SUMMER.wmv",
+        "embed": true,
+        "uri": "http://www.youtube.com/watch?v=iynhjx-kW9M",
+        "title": "STATE OF INDEPENDENCE (MURK CLUB MIX) - DONNA SUMMER.wmv"
+    }
+], "series": [], "released_formatted": "1996", "labels": [
+    {
+        "name": "Manifesto",
+        "entity_type": "1",
+        "catno": "FESX7",
+        "resource_url": "http://api.discogs.com/labels/988",
+        "id": 988,
+        "entity_type_name": "Label"
+    },
+    {
+        "name": "Manifesto",
+        "entity_type": "1",
+        "catno": "FESX  7",
+        "resource_url": "http://api.discogs.com/labels/988",
+        "id": 988,
+        "entity_type_name": "Label"
+    },
+    {
+        "name": "Mercury",
+        "entity_type": "1",
+        "catno": "852 863-1",
+        "resource_url": "http://api.discogs.com/labels/39357",
+        "id": 39357,
+        "entity_type_name": "Label"
+    }
+], "community": {
+    "status": "Accepted",
+    "rating": {
+        "count": 25,
+        "average": 4.1200000000000001
+    },
+    "have": 152,
+    "contributors": [
+        {
+            "username": "frankflo",
+            "resource_url": "http://api.discogs.com/users/frankflo"
+        },
+        {
+            "username": "jape",
+            "resource_url": "http://api.discogs.com/users/jape"
+        },
+        {
+            "username": "brixtonmc",
+            "resource_url": "http://api.discogs.com/users/brixtonmc"
+        },
+        {
+            "username": "Vinyl_For_Sale_By_Radius",
+            "resource_url": "http://api.discogs.com/users/Vinyl_For_Sale_By_Radius"
+        },
+        {
+            "username": "disruptive-influence",
+            "resource_url": "http://api.discogs.com/users/disruptive-influence"
+        },
+        {
+            "username": "hugohugo",
+            "resource_url": "http://api.discogs.com/users/hugohugo"
+        },
+        {
+            "username": "Habitak_Berlin",
+            "resource_url": "http://api.discogs.com/users/Habitak_Berlin"
+        },
+        {
+            "username": "TechElec",
+            "resource_url": "http://api.discogs.com/users/TechElec"
+        },
+        {
+            "username": "peterford1",
+            "resource_url": "http://api.discogs.com/users/peterford1"
+        }
+    ],
+    "want": 15,
+    "submitter": {
+        "username": "frankflo",
+        "resource_url": "http://api.discogs.com/users/frankflo"
+    },
+    "data_quality": "Needs Vote"
+}, "released": "1996", "master_url": "http://api.discogs.com/masters/86699", "year": 1996, "images": [
+    {
+        "uri": "http://api.discogs.com/image/R-79805-1236872445.jpeg",
+        "height": 598,
+        "width": 600,
+        "resource_url": "http://api.discogs.com/image/R-79805-1236872445.jpeg",
+        "type": "primary",
+        "uri150": "http://api.discogs.com/image/R-150-79805-1236872445.jpeg"
+    },
+    {
+        "uri": "http://api.discogs.com/image/R-79805-1098043869.jpg",
+        "height": 255,
+        "width": 340,
+        "resource_url": "http://api.discogs.com/image/R-79805-1098043869.jpg",
+        "type": "secondary",
+        "uri150": "http://api.discogs.com/image/R-150-79805-1098043869.jpg"
+    },
+    {
+        "uri": "http://api.discogs.com/image/R-79805-1184457294.jpeg",
+        "height": 549,
+        "width": 600,
+        "resource_url": "http://api.discogs.com/image/R-79805-1184457294.jpeg",
+        "type": "secondary",
+        "uri150": "http://api.discogs.com/image/R-150-79805-1184457294.jpeg"
+    },
+    {
+        "uri": "http://api.discogs.com/image/R-79805-1184457338.jpeg",
+        "height": 545,
+        "width": 600,
+        "resource_url": "http://api.discogs.com/image/R-79805-1184457338.jpeg",
+        "type": "secondary",
+        "uri150": "http://api.discogs.com/image/R-150-79805-1184457338.jpeg"
+    }
+], "id": 79805, "genres": ["Electronic"], "thumb": "http://api.discogs.com/image/R-150-79805-1236872445.jpeg", "extraartists": [
+    {
+        "join": "",
+        "name": "Quincy Jones",
+        "anv": "",
+        "tracks": "",
+        "role": "Producer",
+        "resource_url": "http://api.discogs.com/artists/17546",
+        "id": 17546
+    },
+    {
+        "join": "",
+        "name": "All Star Choir",
+        "anv": "",
+        "tracks": "",
+        "role": "Vocals",
+        "resource_url": "http://api.discogs.com/artists/504445",
+        "id": 504445
+    },
+    {
+        "join": "",
+        "name": "Jon Anderson",
+        "anv": "",
+        "tracks": "",
+        "role": "Written-By",
+        "resource_url": "http://api.discogs.com/artists/5083",
+        "id": 5083
+    },
+    {
+        "join": "",
+        "name": "Vangelis",
+        "anv": "",
+        "tracks": "",
+        "role": "Written-By",
+        "resource_url": "http://api.discogs.com/artists/7027",
+        "id": 7027
+    }
+], "title": "State Of Independence", "country": "UK", "notes": "Catalog numbers on inner label: FESX7 & 852 863-1\r\nCatalog number on back of sleeve & spine: FESX 7 & 852 863-1\r\n\r\n\"with respect to the memory of Dr. Martin Luther King\"\r\n\r\n\u2117 1996 Polygram Records, Inc. (New York).\r\n\u00a9 1996 Polygram Records, Inc. (New York).\r\nLicensed to Mercury Records Ltd (London).\r\n", "identifiers": [
+    {
+        "type": "Barcode",
+        "description": "Text",
+        "value": "0 42285 28631 1"
+    },
+    {
+        "type": "Label Code",
+        "value": "LC 0268"
+    },
+    {
+        "type": "Other",
+        "description": "Distribution Code",
+        "value": "PY 122"
+    },
+    {
+        "type": "Rights Society",
+        "value": "BIEM/STEMRA"
+    }
+], "companies": [], "uri": "http://www.discogs.com/Donna-Summer-State-Of-Independence/release/79805", "artists": [
+    {
+        "join": "",
+        "name": "Donna Summer",
+        "anv": "",
+        "tracks": "",
+        "role": "",
+        "resource_url": "http://api.discogs.com/artists/6270",
+        "id": 6270
+    }
+], "formats": [
+    {
+        "descriptions": ["12\"", "33 \u2153 RPM"],
+        "name": "Vinyl",
+        "qty": "1"
+    }
+], "resource_url": "http://api.discogs.com/releases/79805", "master_id": 86699, "tracklist": [
+    {
+        "duration": "8:18",
+        "position": "A1",
+        "extraartists": [
+            {
+                "join": "",
+                "name": "Alejandro Guerrieri",
+                "anv": "A. Guerrieri",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/298498",
+                "id": 298498
+            },
+            {
+                "join": "",
+                "name": "DJ Dero",
+                "anv": "",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/37243",
+                "id": 37243
+            },
+            {
+                "join": "",
+                "name": "Nicolas Guerrieri",
+                "anv": "",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/107792",
+                "id": 107792
+            },
+            {
+                "join": "",
+                "name": "Alejandro Guerrieri",
+                "anv": "A. Guerrieri",
+                "tracks": "",
+                "role": "Remix",
+                "resource_url": "http://api.discogs.com/artists/298498",
+                "id": 298498
+            },
+            {
+                "join": "",
+                "name": "Nicolas Guerrieri",
+                "anv": "N. Guerrieri",
+                "tracks": "",
+                "role": "Remix",
+                "resource_url": "http://api.discogs.com/artists/107792",
+                "id": 107792
+            }
+        ],
+        "title": "State Of Independence (DJ Dero Vocal Mix)"
+    },
+    {
+        "duration": "6:25",
+        "position": "A2",
+        "extraartists": [
+            {
+                "join": "",
+                "name": "Jules & Skins",
+                "anv": "",
+                "tracks": "",
+                "role": "Remix [Remixed By]",
+                "resource_url": "http://api.discogs.com/artists/53008",
+                "id": 53008
+            }
+        ],
+        "title": "State Of Independence (Jules & Skins)"
+    },
+    {
+        "duration": "8:23",
+        "position": "B1",
+        "extraartists": [
+            {
+                "join": "",
+                "name": "Oscar Gaetan",
+                "anv": "",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/25647",
+                "id": 25647
+            },
+            {
+                "join": "",
+                "name": "Ralph Falcon",
+                "anv": "",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/29270",
+                "id": 29270
+            },
+            {
+                "join": "",
+                "name": "Murk",
+                "anv": "",
+                "tracks": "",
+                "role": "Remix",
+                "resource_url": "http://api.discogs.com/artists/4656",
+                "id": 4656
+            },
+            {
+                "join": "",
+                "name": "Oscar Gaetan",
+                "anv": "Oscar G",
+                "tracks": "",
+                "role": "Remix",
+                "resource_url": "http://api.discogs.com/artists/25647",
+                "id": 25647
+            }
+        ],
+        "title": "State Of Independence (Murk Club Mix)"
+    },
+    {
+        "duration": "6:20",
+        "position": "B2",
+        "extraartists": [
+            {
+                "join": "",
+                "name": "Oscar Gaetan",
+                "anv": "",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/25647",
+                "id": 25647
+            },
+            {
+                "join": "",
+                "name": "Ralph Falcon",
+                "anv": "",
+                "tracks": "",
+                "role": "Producer [Additional Production], Remix",
+                "resource_url": "http://api.discogs.com/artists/29270",
+                "id": 29270
+            },
+            {
+                "join": "",
+                "name": "Murk",
+                "anv": "",
+                "tracks": "",
+                "role": "Remix",
+                "resource_url": "http://api.discogs.com/artists/4656",
+                "id": 4656
+            },
+            {
+                "join": "",
+                "name": "Oscar Gaetan",
+                "anv": "Oscar G",
+                "tracks": "",
+                "role": "Remix",
+                "resource_url": "http://api.discogs.com/artists/25647",
+                "id": 25647
+            }
+        ],
+        "title": "State Of Independence (Murk-A-Dub-Mix)"
+    }
+], "data_quality": "Needs Vote"}

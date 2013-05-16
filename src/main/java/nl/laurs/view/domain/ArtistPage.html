@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org/dtds.data/wicket-xhtml1.4-strict.dtd">
+
+<head>
+    <link rel="stylesheet" href="css/stylesheet.css" type="text/css"/>
+</head>
+
+<body>
+
+<wicket:extend>
+
+    <div class="formArea defaultpadding">
+
+        <form wicket:id="form">
+            <div class="formField clearfix">
+                <label wicket:id="firstnameLabel" class="fieldname">Voornaam</label> <input wicket:id="firstnameField"
+                                                                                            class="inputfield"
+                                                                                            type="text"/>
+            </div>
+
+            <div class="formField clearfix">
+                <label wicket:id="lastnameLabel" class="fieldname">Achternaam*</label> <input wicket:id="lastnameField"
+                                                                                               class="inputfield"
+                                                                                               type="text"/>
+            </div>
+
+            <div class="formField">
+                <button class="buttonWide" wicket:id="saveButton">
+                    <div class="icon bgBlue ic_save_arrow">save</div>
+                </button>
+            </div>
+        </form>
+
+    </div>
+
+</wicket:extend>
+
+</body>
+</html>
