@@ -1,1 +1,1 @@
-Record collection webapp to communicates with Discogs. Build using Wicket, Spring and Hibernate.
+Web application for maintaining a record collection. New records can be added from the Discogs database with the help of a browser extension for Chrome. Build using Wicket, Spring and Hibernate.
