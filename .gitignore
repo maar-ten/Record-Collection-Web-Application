@@ -26,3 +26,5 @@ atlassian-ide-plugin.xml
 *.iws
 *.ids
 .idea/
+
+.gitignore
