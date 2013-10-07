@@ -1,6 +1,5 @@
 package nl.laurs.domain;
 
-import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -9,7 +8,7 @@ import javax.persistence.MappedSuperclass;
  * @author: Maarten
  */
 @MappedSuperclass
-public abstract class AbstractDiscogsEntity extends AbstractGenericEntity {
+abstract class AbstractDiscogsEntity extends AbstractGenericEntity {
     public static final String DISCOGS_ID = "discogsId";
 
     private Integer discogsId;

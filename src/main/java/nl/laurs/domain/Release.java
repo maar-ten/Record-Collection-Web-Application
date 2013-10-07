@@ -18,8 +18,8 @@ import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
 
 /**
- * A record has a name, a catalog number, and a release date. It has a set of tracks, a set of artists, and a label. There may also be an
- * image of the record's sleeve, and a uri to a video.
+ * A record has a name, a catalog number, and a release date. It has a set of tracks, a set of artists, and a label.
+ * There may also be an image of the record's sleeve, and a uri to a video.
  *
  * @author: Maarten
  */
@@ -54,8 +54,8 @@ public class Release extends AbstractDiscogsEntity {
     private Label label;
 
     public Release() {
-        tracks = new HashSet<Track>();
-        artists = new HashSet<Artist>();
+        tracks = new HashSet<>();
+        artists = new HashSet<>();
     }
 
     public String getCatno() {
@@ -86,8 +86,8 @@ public class Release extends AbstractDiscogsEntity {
         this.artists.add(artists);
     }
 
-    public void removeArtists(Artist artists) {
-        this.artists.remove(artists);
+    public void removeArtist(Artist artist) {
+        this.artists.remove(artist);
     }
 
     public String getTitle() {

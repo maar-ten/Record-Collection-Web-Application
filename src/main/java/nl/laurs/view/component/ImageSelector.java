@@ -32,7 +32,8 @@ public abstract class ImageSelector<T extends Serializable> extends Panel {
 
     protected abstract String getUri(T object);
 
-    public ImageSelector(String id, IModel<? extends T> valueModel, IModel<? extends List<? extends T>> choiceListModel) {
+    public ImageSelector(String id, IModel<? extends T> valueModel,
+            IModel<? extends List<? extends T>> choiceListModel) {
         super(id, valueModel);
 
         if (choiceListModel == null) {
@@ -46,12 +47,12 @@ public abstract class ImageSelector<T extends Serializable> extends Panel {
     protected void onInitialize() {
         super.onInitialize();
 
-        final RadioGroup<T> radioGroup = new RadioGroup<T>("radioGroup", (IModel<T>) getDefaultModel());
+        final RadioGroup<T> radioGroup = new RadioGroup<>("radioGroup", (IModel<T>) getDefaultModel());
         radioGroup.add(createListView(choiceListModel, radioGroup));
         radioGroup.add(createNullOption(radioGroup));
         radioGroup.setRenderBodyOnly(false);
 
-        Form<String> form = new Form<String>("imageSelectorForm", (IModel<String>) getDefaultModel());
+        Form<String> form = new Form<>("imageSelectorForm", (IModel<String>) getDefaultModel());
         form.add(radioGroup);
         add(form);
     }
@@ -63,7 +64,7 @@ public abstract class ImageSelector<T extends Serializable> extends Panel {
             protected void populateItem(ListItem<T> item) {
                 T modelObject = item.getModelObject();
                 item.add(new WebMarkupContainer("image").add(new AttributeAppender("src", getUri(modelObject))));
-                item.add(new Radio<T>("radio", new Model<T>(modelObject), (RadioGroup<T>) radioGroup));
+                item.add(new Radio<>("radio", new Model<>(modelObject), (RadioGroup<T>) radioGroup));
             }
         };
     }
@@ -74,7 +75,7 @@ public abstract class ImageSelector<T extends Serializable> extends Panel {
         }
 
         Fragment nullOption = new Fragment("nullOption", "nullOptionFragment", ImageSelector.this);
-        nullOption.add(new Radio<T>("nullRadio", new Model<T>(null), (RadioGroup<T>) radioGroup));
+        nullOption.add(new Radio<>("nullRadio", new Model<T>(null), (RadioGroup<T>) radioGroup));
         nullOption.add(new Label("nullCaption", getNullOptionLabel()));
         nullOption.setRenderBodyOnly(false);
         return nullOption;
@@ -109,7 +110,7 @@ public abstract class ImageSelector<T extends Serializable> extends Panel {
      * @return a model for the text that will be used as the null value choice
      */
     protected IModel<String> getNullOptionLabel() {
-        return new Model<String>("no image");
+        return new Model<>("no image");
     }
 
     @Override

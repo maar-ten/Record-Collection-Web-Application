@@ -142,7 +142,7 @@ public class DiscogsApiServiceImpl implements DiscogsApiService {
 
     @SuppressWarnings("unchecked")
     public List<DiscogsReleaseImage> getReleaseImages(Map<String, Object> releaseDataMap) {
-        List<DiscogsReleaseImage> releaseImages = new ArrayList<DiscogsReleaseImage>();
+        List<DiscogsReleaseImage> releaseImages = new ArrayList<>();
         if (releaseDataMap.containsKey(RELEASE.IMAGES)) {
             List<Map<String, Object>> images = (List<Map<String, Object>>) releaseDataMap.get(
                     DiscogsApi.RELEASE.IMAGES);
@@ -156,7 +156,7 @@ public class DiscogsApiServiceImpl implements DiscogsApiService {
 
     @SuppressWarnings("unchecked")
     public List<DiscogsReleaseLabel> getDiscogsReleaseLabels(Map<String, Object> releaseDataMap) {
-        List<DiscogsReleaseLabel> discogsLabels = new ArrayList<DiscogsReleaseLabel>();
+        List<DiscogsReleaseLabel> discogsLabels = new ArrayList<>();
         if (releaseDataMap.containsKey(RELEASE.LABELS)) {
             List<Map<String, Object>> labels = (List<Map<String, Object>>) releaseDataMap.get(
                     DiscogsApi.RELEASE.LABELS);
@@ -171,7 +171,7 @@ public class DiscogsApiServiceImpl implements DiscogsApiService {
 
     @SuppressWarnings("unchecked")
     private List<Artist> getArtists(String key, Map releaseData) {
-        List<Artist> artists = new ArrayList<Artist>();
+        List<Artist> artists = new ArrayList<>();
         List<Map<String, Object>> artistMaps = (List<Map<String, Object>>) releaseData.get(key);
         for (Map<String, Object> artistMap : artistMaps) {
             artists.add(getOrCreateArtist(artistMap));
@@ -181,7 +181,7 @@ public class DiscogsApiServiceImpl implements DiscogsApiService {
 
     @SuppressWarnings("unchecked")
     private List<Track> getTracks(String key, Map<String, Object> releaseData) {
-        ArrayList<Track> tracks = new ArrayList<Track>();
+        ArrayList<Track> tracks = new ArrayList<>();
         List<Map<String, Object>> trackMaps = (List<Map<String, Object>>) releaseData.get(key);
         for (Map<String, Object> trackMap : trackMaps) {
             tracks.add(getTrack(trackMap));

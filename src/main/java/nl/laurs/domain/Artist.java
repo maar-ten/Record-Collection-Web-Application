@@ -9,8 +9,6 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 
 /**
  * An artist has a name, which cannot be null, and has one or more releases
@@ -31,7 +29,7 @@ public class Artist extends AbstractDiscogsEntity {
     private Set<Release> releases;
 
     public Artist() {
-        releases = new HashSet<Release>();
+        releases = new HashSet<>();
     }
 
     public String getName() {
@@ -49,5 +47,13 @@ public class Artist extends AbstractDiscogsEntity {
     @Override
     public String toString() {
         return getName();
+    }
+
+    public void addRelease(Release release) {
+        releases.add(release);
+    }
+
+    public void removeRelease(Release release) {
+        releases.remove(release);
     }
 }

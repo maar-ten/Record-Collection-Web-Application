@@ -17,10 +17,8 @@ public class TrackPage extends BasePage {
     }
 
     private void init(TrackModel trackModel, Page backPage) {
-        Form<Track> form = new Form<Track>("form", trackModel);
+        Form<Track> form = new Form<>("form", trackModel);
         add(form);
-
-
     }
 
     @Override

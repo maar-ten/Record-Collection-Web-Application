@@ -33,14 +33,14 @@ public class ArtistPage extends BasePage {
     }
 
     private void init(ArtistModel artistModel, final Page backPage) {
-        final Form<Artist> form = new Form<Artist>("form", artistModel);
+        final Form<Artist> form = new Form<>("form", artistModel);
         add(form);
 
-        TextField lastnameField = new RequiredTextField<String>("lastnameField", artistModel.getLastnameModel());
+        TextField lastnameField = new RequiredTextField<>("lastnameField", artistModel.getLastnameModel());
         form.add(lastnameField);
         form.add(new FormComponentLabel("lastnameLabel", lastnameField));
 
-        TextField firstnameField = new TextField<String>("firstnameField", artistModel.getFirstnameModel());
+        TextField firstnameField = new TextField<>("firstnameField", artistModel.getFirstnameModel());
         form.add(firstnameField);
         form.add(new FormComponentLabel("firstnameLabel", firstnameField));
 
