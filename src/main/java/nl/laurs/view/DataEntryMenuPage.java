@@ -6,7 +6,9 @@ import org.apache.wicket.markup.html.link.Link;
 import nl.laurs.view.domain.ArtistPage;
 
 /**
- * @author: ML
+ * Menu page with links to domain object's CRUD pages.
+ *
+ * @author: Maarten Laurs
  */
 public class DataEntryMenuPage extends BasePage {
 

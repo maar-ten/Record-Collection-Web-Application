@@ -5,7 +5,6 @@ import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.FeedbackPanel;
-import org.apache.wicket.model.IModel;
 
 /**
  * Basic web page containing stylesheet reference, a title bar and a back page button.
@@ -39,13 +38,9 @@ public abstract class BasePage extends WebPage {
         });
     }
 
-    public BasePage(IModel<?> model) {
-        super(model);
-    }
-
     @Override
     protected void onInitialize() {
         super.onInitialize();
-        add(new Label("pageTitle", getPageTitle()));
+        add(new Label("pageTitle", getPageTitle()).setRenderBodyOnly(true));
     }
 }

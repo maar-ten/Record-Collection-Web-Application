@@ -6,7 +6,9 @@ import org.apache.wicket.markup.html.link.Link;
 import nl.laurs.view.overview.ReleaseOverviewPage;
 
 /**
- * @author: ML
+ * Menu page with links to domain object's overview pages.
+ *
+ * @author: Maarten Laurs
  */
 public class DataViewMenuPage extends BasePage {
 

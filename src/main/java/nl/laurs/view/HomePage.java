@@ -4,6 +4,8 @@ import org.apache.wicket.markup.html.link.Link;
 
 /**
  * Homepage
+ *
+ * @author: Maarten Laurs
  */
 public class HomePage extends BasePage {
 
