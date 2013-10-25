@@ -22,6 +22,7 @@ import org.apache.wicket.model.Model;
 import org.apache.wicket.request.mapper.parameter.PageParameters;
 import org.apache.wicket.spring.injection.annot.SpringBean;
 import org.apache.wicket.util.string.StringValue;
+import org.apache.wicket.util.string.StringValueConversionException;
 
 import nl.laurs.discogs.domain.DiscogsReleaseImage;
 import nl.laurs.discogs.domain.DiscogsReleaseLabel;
@@ -39,7 +40,7 @@ import nl.laurs.view.domain.ReleasePage;
  * <p/>
  * The page expects the first parameter to be an integer, which should be the id of a Discogs release entry
  *
- * @author: ML
+ * @author: Maarten Laurs
  */
 public class DiscogsReleasePage extends BasePage {
     public static final Logger LOG = Logger.getLogger(DiscogsReleasePage.class);
@@ -74,7 +75,6 @@ public class DiscogsReleasePage extends BasePage {
         Release release = discogsApiService.createRelease(releaseDataMap);
         if (release == null) {
             error("Data kon niet worden verwerkt");
-            return;
         }
     }
 
@@ -106,7 +106,7 @@ public class DiscogsReleasePage extends BasePage {
         try {
             return releaseId.toInteger();
         }
-        catch (Exception e) {
+        catch (StringValueConversionException e) {
             LOG.error("Error because of release parameter: " + releaseId, e);
         }
         return null;
@@ -196,8 +196,8 @@ public class DiscogsReleasePage extends BasePage {
                     return String.valueOf(index);
                 }
             };
-            DropDownChoice<DiscogsReleaseLabel> dropDownChoice = new DropDownChoice<>(id, valueModel,
-                    choicesModel, renderer);
+            DropDownChoice<DiscogsReleaseLabel> dropDownChoice = new DropDownChoice<>(id, valueModel, choicesModel,
+                    renderer);
             dropDownChoice.setLabel(new Model<>("Label"));
             dropDownChoice.setNullValid(false);
             dropDownChoice.setRequired(true);

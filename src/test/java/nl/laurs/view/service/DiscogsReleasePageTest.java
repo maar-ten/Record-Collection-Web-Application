@@ -1,6 +1,7 @@
 package nl.laurs.view.service;
 
 import java.io.IOException;
+import java.util.List;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -17,17 +18,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 
-import static org.junit.Assert.assertEquals;
+import static com.thoughtworks.selenium.SeleneseTestCase.assertEquals;
 
 /**
  * This suite uses Selenium and an embedded Jetty application server for testing the DiscogsReleasePage.
  * <p/>
- * Remember to set the full path to the chrome driver.
+ * Remember to set the system property webdriver.chrome.driver with the full path to the chrome driver. One way to do
+ * this is System.setProperty("webdriver.chrome.driver","path/to/chromedriver").
  *
  * @author: Maarten Laurs
  */
 public class DiscogsReleasePageTest {
-    private static final String PATH_TO_CHROME_DRIVER = "path_to_driver";
 
     private static ChromeDriverService service;
     private static Server server;
@@ -68,7 +69,6 @@ public class DiscogsReleasePageTest {
     }
 
     private static void createAndStartChromeDriverService() throws IOException {
-        System.setProperty("webdriver.chrome.driver", PATH_TO_CHROME_DRIVER);
         service = ChromeDriverService.createDefaultService();
         service.start();
     }
@@ -92,10 +92,19 @@ public class DiscogsReleasePageTest {
     }
 
     @Test
-    public void openPage() throws Exception {
+    public void loadPage() throws Exception {
         chromeDriver.get("http://localhost/discogs/release/1");
 
         WebElement pageTitle = chromeDriver.findElement(By.className("pageTitle"));
         assertEquals("Discogs service", pageTitle.getText());
+    }
+
+    @Test
+    public void receivedInvalidDiscogsId() throws Exception {
+        chromeDriver.get("http://localhost/discogs/release/abc");
+
+        List<WebElement> elements = chromeDriver.findElements(By.className("feedbackPanelERROR"));
+        WebElement element = elements.get(elements.size() - 1);
+        assertEquals("Onjuiste invoer ontvangen", element.getText());
     }
 }
