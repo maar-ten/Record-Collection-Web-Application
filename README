@@ -3,3 +3,5 @@ Example web application using Spring, Wicket and Hibernate (JPA annotated) techn
 The use case was a web application for maintaining a record (vinyl) collection.
 
 New records can be added from the Discogs database with the help of a browser extension for Chrome.
+
+This code is no longer maintained. Its dependencies will not be updated.
